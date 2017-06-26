@@ -1,3 +1,4 @@
+package gui;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -11,7 +12,7 @@ import javax.swing.SwingConstants;
 
 public class Gui extends JFrame implements ActionListener{
 
-	JFrame frame;
+	public JFrame frame;
 
 	/**
 	 * Launch the application.
