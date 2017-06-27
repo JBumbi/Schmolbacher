@@ -3,12 +3,16 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JList;
 import javax.swing.JPanel;
+
+import logic.MediaManager;
 
 public class Gui2 implements ActionListener{
 
@@ -17,18 +21,7 @@ public class Gui2 implements ActionListener{
 	/**
 	 * Launch the application.
 	 */
-	/*public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Gui2 window = new Gui2();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}*/
+	
 
 	/**
 	 * Create the application.
@@ -69,19 +62,24 @@ public class Gui2 implements ActionListener{
 		btnNeuerOrdnerWhlen.addActionListener(this);
 		btnBeenden.addActionListener(this);
 		
+		
+		
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == btnNeuerOrdnerWhlen)
 		{
-		JFileChooser chooser = new JFileChooser();
-	        chooser.showOpenDialog(null);
+			MediaManager.choose();
+		
+		
+		
 		}
 		if(e.getSource() == btnBeenden)
 		{
 			System.exit(0);
 		}
 	}
+	
 
 }
