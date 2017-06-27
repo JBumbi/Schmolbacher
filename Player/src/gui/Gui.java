@@ -1,3 +1,14 @@
+/**
+ * 
+ * @author  Jan Bumbacher, Benjamin Schenkemeyer
+ * @version 1.1
+ * 
+ */
+
+
+
+
+
 package gui;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -13,33 +24,14 @@ import javax.swing.SwingConstants;
 public class Gui extends JFrame implements ActionListener{
 
 	public JFrame frame;
-
-	/**
-	 * Launch the application.
-	 */
-	/*public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Gui window = new Gui();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});*/
-
 	
-	/**
-	 * Create the application.
-	 */
 	public Gui() {
 		initialize();
 
 	}
 
-	/**
-	 * Initialize the contents of the frame.
+	/*
+	 * Gameframe wirs.
 	 */
 	private void initialize() {
 		frame = new JFrame();
@@ -63,6 +55,9 @@ public class Gui extends JFrame implements ActionListener{
 	}
 
 	@Override
+	/*
+	 *Action Listener Klasse um Gui 2 darzustellen 
+	 */
 	public void actionPerformed(ActionEvent arg0) {
 		Gui2 g2 = new Gui2();
 		g2.frame.setVisible(true);

@@ -1,3 +1,14 @@
+/**
+ * Diese Klasse ist für das zweite Gui zuständig mit dem Beenden Button und dem filechooser.
+ * 
+ * @author  Jan Bumbacher, Benjamin Schenkemeyer
+ * @version 1.1
+ * 
+ */
+
+
+
+
 package gui;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -12,6 +23,8 @@ import javax.swing.JFrame;
 import javax.swing.JList;
 import javax.swing.JPanel;
 
+import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+
 import logic.MediaManager;
 
 public class Gui2 implements ActionListener{
@@ -19,15 +32,15 @@ public class Gui2 implements ActionListener{
 	JFrame frame;
 
 	/**
-	 * Launch the application.
-	 */
-	
-
-	/**
 	 * Create the application.
 	 */
 	JButton btnNeuerOrdnerWhlen = new JButton("Neuer Ordner w\u00E4hlen");
 	JButton btnBeenden = new JButton("Beenden");
+	JList list = new JList();
+	
+
+
+	
 	public Gui2() {
 		initialize();
 	}
@@ -45,7 +58,7 @@ public class Gui2 implements ActionListener{
 		frame.getContentPane().add(panel, BorderLayout.CENTER);
 		panel.setLayout(new GridLayout(1, 0, 0, 0));
 		
-		JList list = new JList();
+
 		panel.add(list);
 		
 		JPanel panel_1 = new JPanel();
@@ -71,9 +84,10 @@ public class Gui2 implements ActionListener{
 		if(e.getSource() == btnNeuerOrdnerWhlen)
 		{
 			MediaManager.choose();
-		
-		
-		
+			MediaManager.initialize();
+			list.add("Test", btnBeenden);	
+		//	list.add(arr.toArray());
+			
 		}
 		if(e.getSource() == btnBeenden)
 		{
