@@ -1,9 +1,4 @@
-/**
- * 
- * @author  Jan Bumbacher, Benjamin Schenkemeyer
- * @version 1.1
- * 
- */
+
 
 
 
@@ -21,17 +16,28 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
+
+/**
+ * 
+ * @author  Jan Bumbacher, Benjamin Schenkemeyer
+ * @version 1.1
+ * 
+ */
 public class Gui extends JFrame implements ActionListener{
 
 	public JFrame frame;
-	
+	/**
+	 * Zum initialisieren von gui eins.
+	 * @author Janbumbacher, Benjamin Schenkemeyer 
+	 */
 	public Gui() {
 		initialize();
 
 	}
 
-	/*
-	 * Gameframe wirs.
+	/**
+	 * Frame initialisieren vom Gui eins.
+	 * @author Jan Bumbacher, Benjamin Schenkemeyer
 	 */
 	private void initialize() {
 		frame = new JFrame();
@@ -55,8 +61,10 @@ public class Gui extends JFrame implements ActionListener{
 	}
 
 	@Override
-	/*
-	 *Action Listener Klasse um Gui 2 darzustellen 
+	/**
+	 *Action Listener um Gui 2 darzustellen 
+	 *@author Jan Bumbacher
+	 *@param arg0
 	 */
 	public void actionPerformed(ActionEvent arg0) {
 		Gui2 g2 = new Gui2();

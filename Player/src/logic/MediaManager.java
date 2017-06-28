@@ -1,12 +1,3 @@
-/**
- * Diese Klasse öffnen den JFilechooser und speichert die Pfade ind dem ausgewähltem Ordner in einer Arraylist.
- * 
- * @author  Jan Bumbacher
- * @version 1.1
- * 
- */
-
-
 package logic;
 
 import java.awt.BorderLayout;
@@ -20,16 +11,21 @@ import javax.swing.JFrame;
 import javax.swing.JList;
 import javax.swing.JPanel;
 
+/**
+ * Diese Klasse öffnen den JFilechooser und speichert die Pfade ind dem ausgewähltem Ordner in einer Arraylist. Hier läuft undere Logic ab.
+ * @author Jan Bumbacher
+ * @version 1.1
+ */
 public class MediaManager {
 	static JFrame frame;
 
 
 	public static Object files;
 
-	/*
+	/**
 	 * Klasse für den FileChooser. Hier wird der Pfad mitgegeben und die einzelnen Dateien in der Console ausgegeben.
+	 * @author Jan Bumbacher
 	 */
-	
 	public static void choose() {
 		JFileChooser chooser = new JFileChooser();
 		chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
@@ -50,8 +46,11 @@ public class MediaManager {
 		}
 	}
 
-	/*
+	/**
 	 * Hier werden die Dateien in eine ArrayList gefüllt.
+	 * @author Jan Bumbacher
+	 * @return list
+	 * @param file
 	 */
 	public static ArrayList<File> getPaths(File file, ArrayList<File> list) {
 		if (file == null || list == null || !file.isDirectory())
@@ -67,8 +66,9 @@ public class MediaManager {
 		return list;
 	}
 	
-	/*
+	/**
 	 * Hier wird das Frame initialisiert.
+	 * @author Jan Bumbacher
 	 */
 	public static void initialize() {
 		frame = new JFrame();
